@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
-  speed: 5.3
+  speed: 4
   neuralNetString: {fileID: 4900000, guid: 94868074e94c1ae4a9e764db9cb18c68, type: 3}
 --- !u!1 &1140973848
 GameObject:

@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public int bounces = 0;
     public bool changeAppearance = false;
     BoxCollider col;
+    public GameObject particles;
     void Start()
     {
         thisPlayer = Instantiate(prefab.appearance,transform.position, transform.rotation);
@@ -34,9 +35,13 @@ public class PlayerStats : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            Instantiate(particles, contact.point, Quaternion.identity);
+        }
         if (collision.gameObject.name == "Ball")
         {
-            bounces++;
+            bounces++;            
         }
     }
 }

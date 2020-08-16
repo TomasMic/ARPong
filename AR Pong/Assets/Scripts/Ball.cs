@@ -41,7 +41,7 @@ public class Ball : MonoBehaviour
     //comment out for game
     private void FixedUpdate()
     {
-        speed += 0.0035f;
+        //speed += 0.0035f;
     }
     private void OnCollisionEnter(Collision collision)
     {
